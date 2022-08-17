@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-function Detail() {
+function HookDetail() {
 	const id = useParams().id;
 	const toDos = useSelector((state) => state);
 	const toDo = toDos.find((toDo) => toDo.id === parseInt(id));
@@ -15,4 +15,4 @@ function Detail() {
 	);
 }
 
-export default Detail;
+export default HookDetail;
