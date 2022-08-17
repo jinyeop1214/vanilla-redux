@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 
 function Detail({ toDos }) {
 	const id = useParams().id;
-	const toDo = toDos.find((toDo) => toDo.id === parseInt(id));
+	const toDo = toDos.reducer.find((toDo) => toDo.id === parseInt(id));
 
 	return (
 		<>

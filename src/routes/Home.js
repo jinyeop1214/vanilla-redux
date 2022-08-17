@@ -4,6 +4,7 @@ import ToDo from "../components/ToDo";
 import { actionCreators } from "../store";
 
 function Home({ toDos, addToDo }) {
+	console.log(toDos);
 	const [text, setText] = useState("");
 
 	const onChange = (e) => {
@@ -24,7 +25,7 @@ function Home({ toDos, addToDo }) {
 				<button>Add</button>
 			</form>
 			<ul>
-				{toDos.map((toDo) => (
+				{toDos.reducer.map((toDo) => (
 					<ToDo key={toDo.id} {...toDo} />
 				))}
 			</ul>
